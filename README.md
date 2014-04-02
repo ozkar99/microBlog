@@ -30,9 +30,19 @@ Microblog Using: MEAN Stack
 
 
 # Deployment:
- * nginx serving AngularJS files.
- * try_files $uri @node
- ( @node { proxy_pass http://localhost:8000; }
+ * nginx serving AngularJS files, files not found going to node.js listening on 8000.
+
+  ``` 
+  location / {
+      try_files $uri $uri/ @node
+  }
+
+  location @node { 
+    proxy_pass http://localhost:8000; 
+  }
+  ```
+
+ * complete vhost example on deploy/nginx.conf
  
 # TODO:
 ----------------------------------
