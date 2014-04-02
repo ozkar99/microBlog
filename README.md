@@ -42,7 +42,7 @@ Microblog Using: MEAN Stack
   }
   ```
 
- * complete vhost example [a here](deploy/nginx.conf)
+ * complete vhost example [here](deploy/nginx.conf)
  
 # TODO:
 ----------------------------------
