@@ -37,8 +37,7 @@ Microblog Using: MEAN Stack
 # TODO:
 ----------------------------------
 
-* Restructure application to have both apps, index.html (microBlog) and admin.html (microBlogAdmin) with their respective crontrollers.
-* Admin.html
-* Figure out a way to authenticate both admin.html and node.js-express with a single sign-on.
+* Functional Admin.html, create post and delete post functionality.
+* Figure out a way to authenticate both admin.html and node.js-express with a single sign-on. (cookies?)
 * Construct the database.
 * what else...?
