@@ -25,8 +25,8 @@ Microblog Using: MEAN Stack
 ## DATABASE:
  * MongoDB
  * Post must have: { "post", "title", "date", "postId" }
- * Use ObjectID for "postID"
- * Use new Date for "date"
+ * Use ObjectID._id for "postID"
+ * Use ObjectID.getTimestamp()  for "date"
 
 
 # Deployment:
