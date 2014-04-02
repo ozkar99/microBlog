@@ -4,7 +4,7 @@
 var microBlogControllers = angular.module('microBlog.controllers', [])
 
 
-microBlogControllers.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
+microBlogControllers.controller('DefaultCtrl', ['$scope', '$http', function($scope, $http) {
         /* get list post here*/
     $http.get('/phones.json').success(function(data) {
         $scope.posts = data;

@@ -7,7 +7,7 @@ angular.module('microBlog', [
   'microBlog.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/home', {templateUrl: 'partials/microBlog/home.html', controller: 'HomeCtrl'});
+  $routeProvider.when('/', {templateUrl: 'partials/microBlog/default.html', controller: 'DefaultCtrl'});
   $routeProvider.when('/info', {templateUrl: 'partials/microBlog/info.html', controller: 'InfoCtrl'});
-  $routeProvider.otherwise({redirectTo: '/home'});
+  $routeProvider.otherwise({redirectTo: '/'});
 }]);
