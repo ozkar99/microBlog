@@ -7,7 +7,7 @@ angular.module('microBlogAdmin', [
   'microBlogAdmin.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'partials/microBlogAdmin/default.html', controller: 'DefaultCtrl'});
+  $routeProvider.when('/', {templateUrl: 'partials/microBlogAdmin/create.html', controller: 'CreateCtrl'});
   $routeProvider.when('/create', {templateUrl: 'partials/microBlogAdmin/create.html', controller: 'CreateCtrl'});
   $routeProvider.when('/delete', {templateUrl: 'partials/microBlogAdmin/delete.html', controller: 'DeleteCtrl'});
   $routeProvider.otherwise({redirectTo: '/'});

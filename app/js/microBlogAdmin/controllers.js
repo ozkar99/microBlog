@@ -4,20 +4,26 @@
 var microBlogControllers = angular.module('microBlogAdmin.controllers', [])
 
 
-microBlogControllers.controller('DefaultCtrl', ['$scope', '$http', function($scope, $http) {
+microBlogControllers.controller('DeleteCtrl', ['$scope', '$http', function($scope, $http) {
         /* get list post here*/
     $http.get('/phones.json').success(function(data) {
         $scope.posts = data;
     });
+
+    $scope.deletePost = function(id) {
+        /*implementar borrar post aqui*/
+    };
+    
 }]);
 
 
 microBlogControllers.controller('CreateCtrl', ['$scope', '$http', function($scope, $http) {
-    /* listen on event to push to db */
+    $scope.createPost = function(titulo, post) {
+        $http.post('/api/post', {
+            title: $scope.titulo,
+            post: $scope.post
+        }).success( function() {
+            console.log("Datos actualizados con exito");
+        });
+    };   
 }]);
-
-microBlogControllers.controller('DeleteCtrl', ['$scope', '$http', function($scope, $http) {
-    /* listen on event to delete from db */
-}]);
-
-
