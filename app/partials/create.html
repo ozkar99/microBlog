@@ -1,11 +1,11 @@
-<form ng-controller="CreateCtrl" role="form">
+<form ng-controller="CreatePostCtrl" role="form">
 
 
 <div class="row">
   <div class="col-md-6">
     <label for="titulo">Titulo:</label>
     <input type="text" class="form-control" name="titulo" id="titulo" ng-model="titulo"/>
-  </div> 
+  </div>
 </div>
 
 <div class="row">
@@ -19,3 +19,4 @@
 <button type="submit" class="btn btn-default" ng-click="createPost(titulo, post)">Crear Post</button>
 
 </form>
+

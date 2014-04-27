@@ -43,11 +43,3 @@ Microblog Using: MEAN Stack
   ```
 
  * complete vhost example [here](deploy/nginx.conf)
- 
-# TODO:
-----------------------------------
-
-* Functional Admin.html, create post and delete post functionality.
-* Figure out a way to authenticate both admin.html and node.js-express with a single sign-on. (cookies?)
-* Construct the database.
-* what else...?
