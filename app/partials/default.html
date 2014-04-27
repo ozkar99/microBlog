@@ -1,7 +1,11 @@
 <ul class="noDecoration" >
     <li ng-repeat="post in posts | filter: query">
-      <h3>{{post.titulo}}</h3> </br>
+      <h3>{{post.titulo}}</h3> 
+      </br>
+      <blockquote>
         <p>{{post.post}}</p>
-        <hr> <!-- nice line... -->
+        <footer>por {{post.autor}}</footer>
+        <hr> <!-- nice line... -->          
+      </blockquote>
     </li>
 </ul>

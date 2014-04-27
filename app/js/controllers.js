@@ -13,7 +13,8 @@ microBlogControllers.controller('DefaultCtrl', ['$scope', '$http', function($sco
     if (! $scope.posts ) {
         $scope.posts = [{
                     titulo: "Error en conexion a la DB",
-                    post: "No me puedo conectar al servidor de base de datos" }];
+                    post: "No me puedo conectar al servidor de base de datos",
+                    autor: "microBlog" }];
     }
 
 }]);
@@ -30,13 +31,30 @@ microBlogControllers.controller('InfoCtrl', ['$scope', '$http', function($scope,
 /*create post*/
 microBlogControllers.controller('CreatePostCtrl', ['$scope', '$http', function($scope, $http) {
 
-    $scope.createPost = function(titulo, post) {
-        $http.post('/api/post', {
-            titulo: $scope.titulo,
-            post: $scope.post
-        }).success( function() {
-            /*redirect to home ?*/
-        });
+    $scope.createPost = function(titulo, post, autor) {
+
+        if ( !autor) {
+          $scope.autor = "Anonimo";
+        }
+
+        if ( !titulo || !post) {
+            $scope.message = "Error: Falta llenar campos.";
+            $('#modal').modal('toggle');
+        } else { 
+
+           $http.post('/api/post', {
+                titulo: $scope.titulo,
+                post: $scope.post,
+                autor: $scope.autor            
+            }).success( function (data, status, headers, config) {
+                $scope.message = "Post creado exitosamente";
+                $('#modal').modal('toggle');
+            }).error ( function (data, status, headers, config) {
+                $scope.message = "Error: Error en la creacion del post";
+                $('#modal').modal('toggle');
+            });
+        }
+
     };
 
 }]);

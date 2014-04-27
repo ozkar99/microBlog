@@ -90,3 +90,18 @@ a:hover {
 .noDecoration {
     list-style-type: none;
 }
+
+/*block quotes for the posts*/
+blockquote {
+    margin: 0 0 5px;
+    padding: 0;
+    border-left: none;
+}
+
+
+
+/*CREATE POST RULES*/
+form {
+    margin: 0 0 5px;
+    padding-left: 20px;
+}

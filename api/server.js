@@ -26,7 +26,8 @@ mongoose.connect('mongodb://localhost:27017/microBlog');
 // Definicion de modelos
 var Post = mongoose.model('Post', {
     titulo: String,
-    post: String
+    post: String, 
+    autor: String
 });
 
 
@@ -47,11 +48,16 @@ app.get('/api/posts', function(req, res) {
 app.post('/api/post', function(req, res) {             
     Post.create({
         titulo: req.body.titulo,
-        post: req.body.post
+        post: req.body.post,
+        autor: req.body.autor
     }, function(err, todo){
         if(err) {
             res.send(err);} 
+        
     });
+
+    res.send(200);  //OK
+
 });
 
 // DELETE un TODO espec?fico y devuelve todos tras borrarlo.
