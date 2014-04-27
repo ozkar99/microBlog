@@ -10,20 +10,26 @@ microBlogControllers.controller('DeleteCtrl', ['$scope', '$http', function($scop
         $scope.posts = data;
     });
 
+    /*delete post*/
     $scope.deletePost = function(id) {
-        /*implementar borrar post aqui*/
+        $http.delete('/api/delete', + id).success( function() {
+            console.log("Post borrado con exito");
+        });
     };
     
 }]);
 
 
 microBlogControllers.controller('CreateCtrl', ['$scope', '$http', function($scope, $http) {
+
+    /*create post*/
     $scope.createPost = function(titulo, post) {
         $http.post('/api/post', {
-            title: $scope.titulo,
+            titulo: $scope.titulo,
             post: $scope.post
         }).success( function() {
-            console.log("Datos actualizados con exito");
+            console.log("Datos actualizados con exito");            
         });
-    };   
+    };
+   
 }]);
