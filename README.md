@@ -6,11 +6,7 @@ Microblog Using: MEAN Stack
 
 # Front-End:
  * Made with AngularJS
-## index.html 
- * Views for annymous users.
-## admin.html
- * CRUD operations for the posts.
- 
+
  
 # Back-End:
  * API running Node.JS + Express
@@ -20,13 +16,11 @@ Microblog Using: MEAN Stack
  * Node.js + Express
  * GET /api/post: returns a list of all the posts.
  * POST /api/post: inserts a new post.
- * DELETE /api/post/:postID -> Deletes the post with postID.
+
  
 ## DATABASE:
  * MongoDB
- * Post must have: { "post", "title", "date", "postId" }
- * Use ObjectID._id for "postID"
- * Use ObjectID.getTimestamp()  for "date"
+ * Post must have: { "post", "title", "author" }
 
 
 # Deployment:
